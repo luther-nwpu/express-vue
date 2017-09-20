@@ -47,13 +47,14 @@ router.post('/upload', function (req, res, next) {
         if (err) {
             console.log('parse error: ' + err);
         } else {
+            console.log(fields);
             console.log('parse files: ' + filesTmp);
-            
-            console.log('文件' + files);
+            console.log(files,);
+            console.log('文件');
+            console.log(files);
             var inputFile = files;
-            console.log(inputFile.path)
             //重命名为真实文件名
-            fs.renameSync(inputFile.path, form.uploadDir+inputFile.originalFilename, function (err) {
+            fs.renameSync(inputFile.avatar[0].path, form.uploadDir+inputFile.avatar[0].originalFilename, function (err) {
                 if (err) {
                     console.log('rename error: ' + err);
                 } else {

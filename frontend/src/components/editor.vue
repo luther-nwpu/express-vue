@@ -56,7 +56,7 @@
 
 <form id='editfile' method='post' action='/api/upload' enctype='multipart/form-data'>
     <input name="text" type="text"/>
-    选择图片：<input name="avatar" id='upfile' type='file'/>
+    选择图片：<input name="avatar" value = "zhanglu" id='upfile' type='file'/>
     <input type='submit' value='提交'/>
 </form>
 
